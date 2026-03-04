@@ -58,8 +58,8 @@ export default function DataTable({ sessions }: DataTableProps) {
 
   const sorted = useMemo(() => {
     return [...sessions].sort((a, b) => {
-      let va: number | string = (a as Record<string, unknown>)[sortKey] as number | string;
-      let vb: number | string = (b as Record<string, unknown>)[sortKey] as number | string;
+      let va: number | string = (a as unknown as Record<string, unknown>)[sortKey] as number | string;
+      let vb: number | string = (b as unknown as Record<string, unknown>)[sortKey] as number | string;
       if (typeof va === "string") va = va.toLowerCase();
       if (typeof vb === "string") vb = vb.toLowerCase();
       if (va < vb) return sortDir === "asc" ? -1 : 1;
