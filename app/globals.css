@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-geist-sans: "Inter", system-ui, sans-serif;
+  --profit: #00ff88;
+  --loss: #ff4757;
+  --neutral: #3b82f6;
+}
+
+body {
+  background: #0f1419;
+}
+
+/* Scrollbar escuro */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1a2332;
+}
+::-webkit-scrollbar-thumb {
+  background: #2d3a4f;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #243044;
+}

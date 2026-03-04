@@ -1,0 +1,11 @@
+# Poker Home Game — Deploy Netlify
+# A URL do Apps Script deve ser configurada em: Netlify > Site settings > Environment variables
+
+[build]
+  command = "npm run build"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[build.environment]
+  NODE_VERSION = "18"
