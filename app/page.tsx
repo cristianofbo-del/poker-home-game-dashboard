@@ -13,8 +13,9 @@ import type { DashboardFilters } from "@/lib/types";
 import type { SessionWithMetrics, PlayerAggregates } from "@/lib/types";
 
 interface ApiResponse {
-  sessions: SessionWithMetrics[];
-  aggregates: PlayerAggregates[];
+  sessions?: SessionWithMetrics[];
+  aggregates?: PlayerAggregates[];
+  error?: string;
 }
 
 const defaultFilters: DashboardFilters = {
