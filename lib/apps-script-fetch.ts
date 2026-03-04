@@ -24,7 +24,7 @@ export async function getSheetDataFromAppsScript(): Promise<SessionRow[]> {
   const sessions: SessionRow[] = [];
 
   for (const row of rows) {
-    const parsed = parseSessionRow(row);
+    const parsed = parseSessionRow(Array.isArray(row) ? row : []);
     if (parsed && parsed.Data && parsed.Jogador) {
       sessions.push(parsed);
     }
